@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  php-apache:
+    build:
+      context: .
+    image: alexandregv/garradin
+    restart: unless-stopped
+    volumes:
+      - data:/var/www/garradin/data/:rw
+    ports:
+      - '8080:80'
+
+volumes:
+  data:
