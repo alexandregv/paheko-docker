@@ -8,7 +8,10 @@ LABEL url="https://github.com/alexandregv/garrad2"
 ENV GARRADIN_VERSION 1.1.26
 
 # Set the timezone
-ENV TZ Europe/Paris
+ENV TZ UTC
+
+# Import the entrypoint
+COPY docker-entrypoint.sh /usr/local/bin/
 
 # Setup workdir
 WORKDIR /var/www/garradin
@@ -45,6 +48,9 @@ RUN cd ./data/plugins \
 
 # Document on which port Apache is running
 EXPOSE 80
+
+# Use a custom entrypoint to configure file permissions and timezone at runtime
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 # Configure a healthcheck (check `docker ps` or `docker-compose` ps to see the status)
 HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1:80/

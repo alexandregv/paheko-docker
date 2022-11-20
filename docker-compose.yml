@@ -2,12 +2,14 @@ version: '3.5'
 
 services:
   php-apache:
-    build:
-      context: .
+    build: .
     image: alexandregv/garradin
     restart: unless-stopped
     volumes:
       - data:/var/www/garradin/data/:rw
+      - ./config.local.php:/var/www/garradin/config.local.php:rw
+    environment:
+      TZ: Europe/Paris
     ports:
       - '8080:80'
 
