@@ -3,8 +3,8 @@
 ## Installation
 
 ```shell
-git clone https://github.com/alexandregv/garradin
-cd garradin
+git clone https://github.com/alexandregv/garradin-docker
+cd garradin-docker
 ```
 
 ## Configuration
