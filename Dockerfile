@@ -5,7 +5,7 @@ LABEL description="Garradin dockerized, with built-in nginx."
 LABEL url="https://github.com/alexandregv/garrad2"
 
 # Set the Garradin version
-ENV GARRADIN_VERSION 1.1.26
+ENV GARRADIN_VERSION 1.2.2
 
 # Set the timezone
 ENV TZ UTC
