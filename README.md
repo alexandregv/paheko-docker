@@ -29,6 +29,6 @@ Please note that you likely want to run this behind a reverse-proxy, like Nginx 
 
 Running behind a reverse-proxy allows you to use TLS (HTTPS) and if you are hosting multiple websites you probably already have one.  
 You just have to point your proxy at this Garradin instance (`http://localhost:8080`), with a "Proxy Pass" or similar.  
-Some examples are provided for Nginx and Traefik, in the `proxy-examples/` folder.
+Some examples are provided for Nginx and Traefik, in the [proxy-examples/](./proxy-examples/) folder.
 
 Please note that when using your custom domain, even with a reverse-proxy, you MUST follow the instructions given in [Custom Domain](#custom-domain).
