@@ -2,7 +2,7 @@
 set -e
 
 # Make sure the configuration is readable+writable by www-data (apache user)
-chown www-data:www-data /var/www/garradin/config.local.php
+chown www-data:www-data /var/www/paheko/config.local.php
 
 # Configure the timezone
 [ -z $TZ ] && export TZ=UTC
