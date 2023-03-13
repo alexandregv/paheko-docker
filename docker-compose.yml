@@ -3,11 +3,11 @@ version: '3.5'
 services:
   php-apache:
     build: .
-    image: alexandregv/garradin:1.2.2
+    image: alexandregv/paheko:1.2.6
     restart: unless-stopped
     volumes:
-      - data:/var/www/garradin/data/:rw
-      - ./config.local.php:/var/www/garradin/config.local.php:rw
+      - data:/var/www/paheko/data/:rw
+      - ./config.local.php:/var/www/paheko/config.local.php:rw
     environment:
       TZ: Europe/Paris
     ports:
