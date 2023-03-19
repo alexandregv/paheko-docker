@@ -4,6 +4,13 @@ LABEL maintainer="alexandregv <contact@alexandregv.fr>"
 LABEL description="Paheko dockerized, with built-in nginx."
 LABEL url="https://github.com/alexandregv/garrad2"
 
+# Install php extensions
+RUN apt-get -y update \
+ && apt-get install -y libicu-dev \
+ && docker-php-ext-configure intl \
+ && docker-php-ext-install intl
+ && rm -rf /var/lib/apt/lists/*
+
 # Set the paheko version
 ENV PAHEKO_VERSION 1.2.7
 
@@ -33,11 +40,6 @@ RUN curl -L -O https://fossil.kd2.org/paheko/uv/paheko-$PAHEKO_VERSION.tar.gz \
  && tar xf paheko-$PAHEKO_VERSION.tar.gz -C . --strip-components=1 \
  && rm -r paheko-$PAHEKO_VERSION.tar.gz \
  && chown -R www-data:www-data .
-
-RUN apt-get -y update \
- && apt-get install -y libicu-dev \
- && docker-php-ext-configure intl \
- && docker-php-ext-install intl
 
 # Download and install paheko plugins
 RUN cd ./data/plugins \
