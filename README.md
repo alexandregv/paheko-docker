@@ -1,4 +1,4 @@
-# paheko dockerized, with built-in Apache2 server
+# Paheko dockerized, with built-in Apache2 server (formerly Garradin)
 
 ## Installation
 
