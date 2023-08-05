@@ -8,7 +8,7 @@ LABEL url="https://github.com/alexandregv/garrad2"
 RUN apt-get -y update \
  && apt-get install -y libicu-dev \
  && docker-php-ext-configure intl \
- && docker-php-ext-install intl
+ && docker-php-ext-install intl \
  && rm -rf /var/lib/apt/lists/*
 
 # Set the paheko version
