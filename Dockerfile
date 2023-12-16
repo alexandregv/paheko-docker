@@ -12,7 +12,7 @@ RUN apt-get -y update \
  && rm -rf /var/lib/apt/lists/*
 
 # Set the paheko version
-ENV PAHEKO_VERSION 1.3.2
+ENV PAHEKO_VERSION 1.3.4
 
 # Set the timezone
 ENV TZ UTC

@@ -3,7 +3,7 @@ version: '3.5'
 services:
   php-apache:
     build: .
-    image: alexandregv/paheko:1.2.6
+    image: alexandregv/paheko:1.3.4
     restart: unless-stopped
     volumes:
       - data:/var/www/paheko/data/:rw
